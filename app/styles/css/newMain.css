@@ -1,0 +1,359 @@
+/******************  Tags  *******************/
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: hsl(0, 0%, 95%);
+}
+a:link,
+a:visited {
+  color: #000;
+}
+header {
+  width: 100%;
+}
+li {
+  list-style: none;
+  list-style-position: outside;
+}
+/*h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}*/
+
+
+
+
+/************************  NAVBAR  ***********************/
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  /*border-bottom: 1px solid #000;*/
+}
+.navbar-wrap {
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-wrap-btn {
+  width: 25px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-wrap-btnBar {
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.navbar-wrap-logo {
+  font-family: SF-display-regular;
+  font-size: 1rem;
+  color: #FFF;
+}
+.navbar-wrap-cart {
+  width: 30px;
+  height: 30px;
+  background-color: #FFF;
+}
+/*.sub-navbar {
+  width: 100%;
+}
+.sub-navbar-wrap {
+  width: 100%;
+}
+.sub-navbar-wrap-location {}*/
+
+
+
+
+/************************  COMMON CLASS  ***********************/
+.sub-navbar {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+.sub-navbar-wrap {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sub-navbar-wrap-location {
+  font-size: 1rem;
+  font-family: SF-display-regular;
+}
+.wrap {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
+/************************  NAVWRAP  ***********************/
+.nav-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-wrap-list {
+  width: 80%;
+  padding: 0;
+}
+.nav-wrap-item {
+  text-align: center;
+}
+
+
+
+
+
+/************************  HOME  ***********************/
+.home {
+  width: 100%;
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* home lookbook */
+.home-lookbook-carousel-wrap {
+  width: 100%;
+  background-color: #FFF;
+}
+.home-lookbook-carousel {
+  width: 100%;
+}
+.home-lookbook-carousel-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.home-lookbook-carousel-item {
+  width: 100%;
+  height: 300px;
+  background-color: #000;
+}
+/* /home lookbook */
+
+/* home solgan wrap */
+.home-solgan-wrap {
+  width: 100%;
+  background-color: #fff;
+}
+.home-slogan {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-slogan-title {
+  font-family: SF-display-regular;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.home-slogan-subtitle {
+  font-family: SF-display-regular;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+.home-guideBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-guideBtn-item {
+  width: 100px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SF-display-light;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+/* /home solgan wrap */
+
+/* home process wrap */
+.home-process-wrap {
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+}
+.home-process-title {
+  font-family: SF-display-regular;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-process-video {
+  width: 300px;
+  height: 200px;
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  margin-bottom: 50px;
+}
+.home-process-flowchart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flowchart-item {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: SF-text-regular;
+  font-size: 1rem;
+}
+.flowchart-item-no {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-right: 10px;
+}
+.home-process-startBtn {
+  width: 100px;
+  height: 50px;
+  border: 1px solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SF-display-light;
+  font-size: 1rem;
+}
+/* /home process wrap */
+/* home contact wrap */
+.home-contact-wrap {
+  width: 100%;
+  /*background-color: #000;*/
+  background-color: hsl(0, 0%, 95%);
+}
+.home-contact {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.home-contact-author {
+  width: 100%;
+  text-align: center;
+  font-family: SF-display-regular;
+  color: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-contact-media-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-contact-media {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.home-contact-media-title {
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-family: SF-display-light;
+  color: #000;
+}
+.home-contact-media-list {
+  margin: 0;
+  padding-left: 10px;
+}
+.home-contact-media-list li {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: SF-display-light;
+  font-size: 1rem;
+  color: #000;
+}
+.mediaLine::before {
+  content: "LINE id: ";
+  color: #000;
+  font-family: SF-text-regular;
+  font-size: 1rem;
+}
+.mediaMail::before {
+  content: "Mail: ";
+  color: #000;
+  font-family: SF-text-regular;
+  font-size: 1rem;
+}
+.mediaTel::before {
+  content: "Tel: ";
+  color: #000;
+  font-family: SF-text-regular;
+  font-size: 1rem;
+}
+
+.home-contact-right {
+  width: 100%;
+  text-align: center;
+  font-family: SF-text-regular;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-top: 50px;
+  color: #000;
+}
+/* /home contact wrap */

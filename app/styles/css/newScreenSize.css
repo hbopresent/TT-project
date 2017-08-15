@@ -1,0 +1,62 @@
+/************************  SCREEN BREAKPOINT  ***********************/
+@media only screen and (max-width: 575px) {
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 768px) {
+  /* navbar */
+  .navbar {
+    height: 70px;
+  }
+  .navbar-wrap {
+    width: 80%;
+  }
+  .navbar-wrap-btn {
+    width: 35px;
+  }
+  .navbar-wrap-btnBar {
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .navbar-wrap-logo {
+    font-size: 2rem;
+  }
+  /* /navbar */
+  /* home */
+  .sub-navbar-wrap {
+    width: 80%;
+  }
+  .sub-navbar-wrap-location {
+    font-size: 2rem;
+  }
+  .home-slogan-title {
+    font-size: 2rem;
+  }
+  .home-slogan-subtitle {
+    font-size: 1.5rem;
+  }
+  .home-process-flowchart {
+    flex-direction: row;
+    width: 90%;
+  }
+  .flowchart-item {
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  .home-contact-author {
+    width: 50%;
+  }
+  .home-contact-media-wrap {
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+/*@media only screen and (min-width: 991px) and (max-width: 1199px) {
+
+}*/
+/*@media only screen and (min-width: 1200px) {}*/

@@ -1,0 +1,478 @@
+/******************  Tags  *******************/
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244, 204, 174);
+  overflow: hidden;
+}
+input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+footer {
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0%;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+}
+ol {
+  margin: 0;
+  padding-left: 15px;
+}
+li {
+  list-style-position: outside;
+}
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+
+
+
+
+/************************  HOME PAGE  ***********************/
+.homePage {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background-color: rgb(244, 204, 174);
+}
+
+
+
+
+/************************  HEADER  ***********************/
+.header-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-navbar h1{
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: SF-display-regular;
+}
+
+/************************  Creation Panel  ***********************/
+.creationPanel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.creationPanel-skin {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(244, 204, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creationPanel-skin-tattoo {
+  width: 95%;
+  height: 100px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: SF-display-light;
+}
+.creationPanel-toolbar-closeButton {
+  width: 10%;
+  height: 50px;
+  font-size: 1rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/closeWhite.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+
+
+
+.creationPanel-toolbar {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: scroll;
+  background-color: #000;
+}
+.creationPanel-toolbar-item {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: SF-display-light;
+  cursor: default;
+}
+/* toolbar ==> font */
+.creationPanel-toolbar-font {
+  font-size: 2.5rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.creationPanel-toolbar-fontList {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0%;
+  top: -60px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transition: top 0.2s ease;
+  background-color: #000;
+}
+.creationPanel-toolbar-fontList-item {
+  width: 20%;
+  height: 50px;
+  font-size: 2.5rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #FFF;
+  cursor: default;
+}
+.creationPanel-toolbar-fontList-item:last-child {
+  border-right: 0;
+}
+/* toolbar ==> text color */
+.creationPanel-toolbar-color {
+  font-size: 1.25rem;
+  text-align: center;
+  display: block;
+  justify-content: none;
+  align-items: none;
+  border-right: 0;
+  font-family: serif;
+}
+/* toolbar ==> skin color */
+.creationPanel-toolbar-skincolor {
+  font-size: 1rem;
+  color: #FFF;
+}
+.creationPanel-toolbar-skincolorPicker {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: -60px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  z-index: 2;
+  transition: top 0.2s ease;
+}
+.skincolorOption {
+  width: 25%;
+  height: 50px;
+}
+
+
+
+
+.creationPanel-letterAmount {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  position: absolute;
+  right: 7%;
+  top: 28%;
+  transform-origin: center;
+  font-family: SF-text-regular;
+}
+@keyframes notification {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.creationPanel-displayButton {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #000;
+  position: absolute;
+  right: 7%;
+  bottom: 10%;
+}
+.creationPanel-displayWork {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244, 204, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  visibility: hidden;
+}
+.creationPanel-displayWork-content {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.creationPanel-displayWork-close {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #FFF;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 30px;
+  left: calc((100% - 50px) / 2);
+}
+
+
+
+
+
+/************************  Footer  ***********************/
+.footer-navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #000;
+}
+.footer-navbar-item {
+  width: 25%;
+  height: 30px;
+  color: #FFF;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  font-family: SF-display-light;
+  /*font-family: SF-display-ultralight;*/
+}
+
+
+
+
+
+/************************  ABOUT  ***********************/
+.homePage-about {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: #FFF;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  display: none;
+}
+.homePage-about-wrap {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.homePage-about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.homePage-about-top-title,
+.homePage-about-top-language {
+  font-family: SF-display-Thin;
+}
+.homePage-about-top-title {
+  font-size: 2rem;
+}
+.homePage-about-top-option {
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
+.homePage-about-top-language {
+  color: #FFF;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homePage-about-close {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.homePage-about-closeBar {
+  position: absolute;
+  left: 14.5px;
+  top: 5px;
+  width: 1px;
+  height: 20px;
+  background-color: #FFF;
+}
+.homePage-about-text-en,
+.homePage-about-text-ch {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.homePage-about-text-en {
+  display: none;
+}
+.inner-text {
+  font-size: 1rem;
+  font-family: SF-text-light;
+  line-height: 1.2rem;
+}
+.homePage-about-article {
+  width: 100%;
+  margin-top: 30px;
+}
+.homePage-about-article-title {
+  font-family: SF-display-thin;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+/************************  Contact  ***********************/
+.homePage-contact {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: #000;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  display: none;
+}
+.homePage-contact-wrap {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homePage-contact-list-item {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: SF-display-light;
+}
+.homePage-contact-close {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.homePage-contact-closeBar {
+  position: absolute;
+  left: 19.5px;
+  top: 7.5px;
+  width: 1px;
+  height: 25px;
+  background-color: #FFF;
+}
+
+
+
+
+/************************  Line Code  ***********************/
+.homePage-lineCode {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 20;
+  background-color: rgb(0,0,0);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.homePage-lineCode-img {
+  width: 250px;
+  height: 250px;
+  background-image: url("../../images/line.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.homePage-lineCode-close {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.homePage-lineCode-closeBar {
+  position: absolute;
+  left: 19.5px;
+  top: 7.5px;
+  width: 1px;
+  height: 25px;
+  background-color: #FFF;
+}
