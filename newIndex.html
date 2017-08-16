@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="app/styles/css/normalize.css"/>
     <link rel="stylesheet" href="app/styles/css/fontStyle.css"/>
     <link rel="stylesheet" href="app/styles/css/newMain.css"/>
-    <link rel="stylesheet" href="app/styles/css/playground.css"/>
+    <link rel="stylesheet" href="app/styles/css/play.css"/>
     <link rel="stylesheet" href="app/styles/css/cart.css"/>
     <link rel="stylesheet" href="app/styles/css/lookbook.css"/>
     <link rel="stylesheet" href="app/styles/css/about.css"/>
@@ -28,29 +28,24 @@
         <div class="navbar-wrap-cart"></div>
       </div>
     </nav>
-    <!-- <nav class="sub-navbar">
-      <div class="sub-navbar-wrap">
-        <div class="sub-navbar-wrap-location">PLAYGROUND</div>
-      </div>
-    </nav> -->
     <!-- nav wrap -->
-    <section class="nav-wrap" style="display:none">
+    <section class="nav-wrap">
       <ul class="nav-wrap-list">
         <li class="nav-wrap-item">HOME</li>
-        <li class="nav-wrap-item">PLAYGROUND</li>
+        <li class="nav-wrap-item">PLAY</li>
         <li class="nav-wrap-item">LOOKBOOK</li>
         <li class="nav-wrap-item">ABOUT</li>
       </ul>
     </section>
     <!-- HOME -->
-    <section class="home">
+    <section class="home" style="display:none">
       <nav class="sub-navbar">
         <div class="sub-navbar-wrap">
           <div class="sub-navbar-wrap-location">HOME</div>
         </div>
       </nav>
       <!-- home slogan wrap -->
-      <div class="home-solgan-wrap">
+      <div class="home-solgan-wrap" style="display:none">
         <div class="wrap">
           <div class="home-slogan">
             <h1 class="home-slogan-title">設計自己專屬的紋身貼</h1>
@@ -124,52 +119,52 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="home-contact-media">
-            <h2 class="home-contact-media-title">Follow me</h2>
-            <ul class="home-contact-media-list">
-              <li>
-                <a href="https://www.instagram.com/franklin__hung/" target="_blank">instagram</a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/ChengHungFranklin/" target="_blank" style="color:#3b5998">facebook</a>
-              </li>
-              <li>
-                <a href="https://www.pinterest.com/franklinhungcom/" target="_blank" style="color:#C92228">pinterest</a>
-              </li>
-            </ul>
-          </div>
-          <div class="home-contact-media">
-            <h2 class="home-contact-media-title">Get in touch</h2>
-            <ul class="home-contact-media-list">
-              <li class="mediaLine">hbopresent</li>
-              <li class="mediaMail">
-                <a href="mailto:franklinhungcom@gmail.com" target="_blank">franklinhungcom@gmail.com</a>
-              </li>
-              <li class="mediaTel">
-                <a href="telto:+886936678608" target="_blank">+886936678608</a>
-              </li>
-            </ul>
-          </div> -->
           <p class="home-contact-right">Copyright &copy 2017 FRANKLIN All rights reserved.</p>
         </div>
       </div>
     </section>
     <!-- /HOME -->
-    <!-- PLAYGROUND -->
-    <section class="playground" style="display:none">
-      <div class="playground-workarea">
-        <div class="playground-workarea-wrap">
-          <input type="text" class="playground-workarea-words" placeholder="Write here!" maxlength="25" autocomplete="off" spellcheck="false" autocorrect="off"/>
-          <input type="text" class="wordsLength"/>
+    <!-- play -->
+    <section class="play" style="display:none">
+      <nav class="sub-navbar">
+        <div class="sub-navbar-wrap">
+          <div class="sub-navbar-wrap-location">PLAY</div>
         </div>
-        <div class="playground-workarea-options">
-          <input type="number" class="quantity" min="1"/>
-          <button class="addToCart">Add to Cart</button>
+      </nav>
+      <div class="play-workarea">
+        <div class="wrap play-workarea-wrap">
+          <div class="play-workarea-tattoo">
+            <input type="text" class="play-workarea-tattoo-words" id="tattooWords" placeholder="Type here!" maxlength="25" autocomplete="off" spellcheck="false" autocorrect="off" autofocus/>
+            <input type="text" class="wordsLength" readonly autocomplete="off" value="25" contenteditable="false"/>
+          </div>
+          <div class="play-workarea-options">
+            <div class="play-workarea-options-font">
+              <label for="font">字體:</label>
+              <input type="button" class="font" value="stalemate"/>
+            </div>
+            <div class="play-workarea-options-color">
+              <label for="color">顏色:</label>
+              <input type="button" class="creationPanel-toolbar-item creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
+                     id="colorSelector" value="#000000" readonly autocomplete="off"></input>
+            </div>
+            <div class="play-workarea-options-quantity">
+              <label for="quantity">數量:</label>
+              <input type="number" class="quantity" min="1" value="1"/>
+            </div>
+            <div class="addToCart">Add to Cart</div>
+          </div>
         </div>
       </div>
-      <div class="playground-message">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <div class="play-message">
+        <div class="wrap">
+          <article class="article customizationMsg" style="margin:0">
+            <h2 class="customizationMsg-title">購買須知</h2>
+            <p>尺寸依字體及內容長度而定</p>
+            <p>單品NT$200</p>
+            <p>台灣本島免運費 外島運費100</p>
+            <p>買2送1 買滿8件全球免運費</p>
+          </article>
+        </div>
       </div>
     </section>
     <!-- /WORKAREA -->
@@ -217,37 +212,117 @@
     <!-- /LOOKBOOK -->
     <!-- CART -->
     <section class="cart" style="display:none">
-      <div class="cart-message">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      </div>
       <div class="cart-wrap">
-        <div class="cart-goods">
-          <div class="cart-goods-style"></div>
-          <div class="cart-goods-words"></div>
-          <div class="cart-goods-font"></div>
-          <div class="cart-goods-color"></div>
-          <input type="number" min="1"/>
-          <button class="deleteGoods"></button>
-          <!-- <div class="cart-goods-amount">
-            <div class="cart-goods-subtract"></div>
-            <input type="text" class="cart-goods-totalAmount"/>
-            <div class="cart-goods-add"></div>
-          </div> -->
+          <h1 class="cart-title">購物車</h1>
+          <div class="cart-goods-collection">
+            <div class="cart-goods">
+              <div class="cart-goods-sample">I'm better under pressure</div>
+              <div class="cart-goods-option">
+                <label for="words">內容:</label>
+                <p class="cart-goods-content">
+                  I'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressure
+                </p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="font">字體:</label>
+                <p class="cart-goods-content">stalemate</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="color">顏色:</label>
+                <p class="cart-goods-content">#ff55ee</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="quantity">數量:</label>
+                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
+              </div>
+              <div class="cart-goods-delete">取消購買</div>
+            </div>
+            <div class="cart-goods">
+              <div class="cart-goods-sample">I'm better under pressure</div>
+              <div class="cart-goods-option">
+                <label for="words">內容:</label>
+                <p class="cart-goods-content">
+                  I'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressure
+                </p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="font">字體:</label>
+                <p class="cart-goods-content">stalemate</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="color">顏色:</label>
+                <p class="cart-goods-content">#ff55ee</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="quantity">數量:</label>
+                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
+              </div>
+              <div class="cart-goods-delete">取消購買</div>
+            </div>
+            <div class="cart-goods">
+              <div class="cart-goods-sample">I'm better under pressure</div>
+              <div class="cart-goods-option">
+                <label for="words">內容:</label>
+                <p class="cart-goods-content">
+                  I'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressure
+                </p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="font">字體:</label>
+                <p class="cart-goods-content">stalemate</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="color">顏色:</label>
+                <p class="cart-goods-content">#ff55ee</p>
+              </div>
+              <div class="cart-goods-option">
+                <label for="quantity">數量:</label>
+                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
+              </div>
+              <div class="cart-goods-delete">取消購買</div>
+            </div>
+          </div>
         </div>
-        <div class="cart-goods"></div>
-        <div class="cart-goods"></div>
-        <div class="cart-goods"></div>
+      </div>
+      <div class="cart-message">
+        <div class="wrap">
+          <article class="article customizationMsg">
+            <h2 class="customizationMsg-title">付款方式</h2>
+            <p>xxxxxxxxxxx</p>
+            <p>xxxxxxxxxxx</p>
+          </article>
+          <article class="article customizationMsg" style="margin:0">
+            <h2 class="customizationMsg-title">購買須知</h2>
+            <p>請先付款才會出貨喔~</p>
+            <p>單品NT$200</p>
+            <p>台灣本島免運費 外島運費100</p>
+            <p>買2送1 買滿8件全球免運費</p>
+          </article>
       </div>
     </section>
     <!-- /CART -->
+    <!-- dynamical page -->
+    <section class="font-list" style="display:none">
+      <!-- font item -->
+      <div class="font-list-wrap">
+        <div class="font-list-item" id="font0" style="font-family:stalemate">Choose me please!</div>
+        <div class="font-list-item" id="font1" style="font-family:sacramento">Choose me please!</div>
+        <div class="font-list-item" id="font2" style="font-family:afterdark">Choose me please!</div>
+        <div class="font-list-item" id="font3" style="font-family:notera">Choose me please!</div>
+        <div class="font-list-item" id="font4" style="font-family:leaguescript">Choose me please!</div>
+        <div class="font-list-item leaveFontList" id="leaveFontList">
+          <span class="leaveBar" style="transform:rotateZ(45deg)"></span>
+          <span class="leaveBar" style="transform:rotateZ(-45deg)"></span>
+        </div>
+      </div>
+    </section>
     <script>
       // change text color
-      // function setTextColor(picker) {
-      //   document.getElementById("creationPanelTattoo").style.color = '#' + picker.toString();
-      // }
+      function setTextColor(picker) {
+        document.getElementById("tattooWords").style.color = '#' + picker.toString();
+      }
     </script>
-    <!-- <script src="app/scripts/library/jscolor.min.js"></script> -->
+    <script src="app/scripts/library/jscolor.min.js"></script>
     <!-- <script src="app/scripts/frontend/main.js"></script> -->
   </body>
 </html>
