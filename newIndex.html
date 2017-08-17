@@ -14,46 +14,48 @@
     <link rel="stylesheet" href="app/styles/css/about.css"/>
     <!-- <link rel="stylesheet" href="app/styles/css/main.css"/> -->
     <link rel="stylesheet" href="app/styles/css/newScreenSize.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.js"></script> -->
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar">
       <div class="navbar-wrap">
-        <div class="navbar-wrap-btn">
-          <span class="navbar-wrap-btnBar"></span>
-          <span class="navbar-wrap-btnBar"></span>
+        <div class="navbar-wrap-btn" id="navbarBtn">
+          <span class="navbar-wrap-btnBar" id="navFirstbar"></span>
+          <span class="navbar-wrap-btnBar" id="navSecondbar"></span>
         </div>
-        <div class="navbar-wrap-logo">FRANKLIN</div>
-        <div class="navbar-wrap-cart"></div>
+        <div class="navbar-wrap-logo" id="brandlogo">FRANKLIN</div>
+        <div class="navbar-wrap-cart" id="cartBtn"></div>
       </div>
     </nav>
     <!-- nav wrap -->
-    <section class="nav-wrap">
-      <ul class="nav-wrap-list">
-        <li class="nav-wrap-item">HOME</li>
-        <li class="nav-wrap-item">PLAY</li>
-        <li class="nav-wrap-item">LOOKBOOK</li>
-        <li class="nav-wrap-item">ABOUT</li>
-      </ul>
+    <section class="navPage" id="navPage" style="display:none">
+      <div class="nav-wrap">
+        <ul class="nav-wrap-list">
+          <li class="nav-wrap-item" id="gotoHome">HOME</li>
+          <li class="nav-wrap-item" id="gotoPlay">PLAY</li>
+          <li class="nav-wrap-item" id="gotoLookbook">LOOKBOOK</li>
+          <!-- <li class="nav-wrap-item" id="gotoAbout">ABOUT</li> -->
+        </ul>
+      </div>
     </section>
     <!-- HOME -->
-    <section class="home" style="display:none">
+    <section class="home" id="homeSection">
       <nav class="sub-navbar">
         <div class="sub-navbar-wrap">
           <div class="sub-navbar-wrap-location">HOME</div>
         </div>
       </nav>
       <!-- home slogan wrap -->
-      <div class="home-solgan-wrap" style="display:none">
+      <div class="home-solgan-wrap">
         <div class="wrap">
           <div class="home-slogan">
             <h1 class="home-slogan-title">設計自己專屬的紋身貼</h1>
             <h3 class="home-slogan-subtitle">just be yourself</h3>
           </div>
           <div class="home-guideBtn">
-            <div class="home-guideBtn-item">What's FRANKLIN</div>
-            <div class="home-guideBtn-item">Get started</div>
+            <div class="home-guideBtn-item" id="guideToAbout">What's FRANKLIN</div>
+            <div class="home-guideBtn-item" id="guideToPlay">Get started</div>
           </div>
         </div>
       </div>
@@ -73,13 +75,13 @@
               <span class="flowchart-item-no">3</span><p>透過社群或mail將照片寄給我</p>
             </div>
           </div>
-          <div class="home-process-startBtn">Get started</div>
+          <div class="home-process-startBtn" id="guideToPlay2">Get started</div>
         </div>
       </div>
       <!-- home lookbook carousel -->
       <div class="home-lookbook-carousel-wrap">
         <div class="wrap">
-          <div class="home-lookbook-carousel">
+          <div class="home-lookbook-carousel" id="lookbookCarousel">
             <ul class="home-lookbook-carousel-list">
               <li class="home-lookbook-carousel-item"></li>
             </ul>
@@ -125,7 +127,7 @@
     </section>
     <!-- /HOME -->
     <!-- play -->
-    <section class="play" style="display:none">
+    <section class="play" id="playSection" style="display:none">
       <nav class="sub-navbar">
         <div class="sub-navbar-wrap">
           <div class="sub-navbar-wrap-location">PLAY</div>
@@ -135,23 +137,23 @@
         <div class="wrap play-workarea-wrap">
           <div class="play-workarea-tattoo">
             <input type="text" class="play-workarea-tattoo-words" id="tattooWords" placeholder="Type here!" maxlength="25" autocomplete="off" spellcheck="false" autocorrect="off" autofocus/>
-            <input type="text" class="wordsLength" readonly autocomplete="off" value="25" contenteditable="false"/>
+            <input type="text" class="wordsLength" id="tattooWordsLen" readonly autocomplete="off" value="25" contenteditable="false"/>
           </div>
           <div class="play-workarea-options">
             <div class="play-workarea-options-font">
               <label for="font">字體:</label>
-              <input type="button" class="font" value="stalemate"/>
+              <input type="button" class="font" id="userFont" value="stalemate"/>
             </div>
             <div class="play-workarea-options-color">
               <label for="color">顏色:</label>
               <input type="button" class="creationPanel-toolbar-item creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
-                     id="colorSelector" value="#000000" readonly autocomplete="off"></input>
+                     id="userColor" value="000000" readonly autocomplete="off"></input>
             </div>
             <div class="play-workarea-options-quantity">
               <label for="quantity">數量:</label>
-              <input type="number" class="quantity" min="1" value="1"/>
+              <input type="number" class="quantity" id="goodsQuantity" min="1" value="1"/>
             </div>
-            <div class="addToCart">Add to Cart</div>
+            <div class="addToCart" id="addToCartBtn">Add to Cart</div>
           </div>
         </div>
       </div>
@@ -169,7 +171,7 @@
     </section>
     <!-- /WORKAREA -->
     <!-- ABOUT -->
-    <section class="about" style="display:none">
+    <section class="about" id="aboutSection" style="display:none">
       <article class="about-article">
         <h2 class="about-article-title">Vision</h2>
         <p class="about-article-text">
@@ -202,7 +204,7 @@
     </section>
     <!-- /ABOUT -->
     <!-- LOOKBOOK -->
-    <section class="lookbook" style="display:none">
+    <section class="lookbook" id="lookbookSection" style="display:none">
       <div class="lookbook-wrap">
         <div class="lookbook-item"></div>
         <div class="lookbook-item"></div>
@@ -211,7 +213,7 @@
     </section>
     <!-- /LOOKBOOK -->
     <!-- CART -->
-    <section class="cart" style="display:none">
+    <section class="cart" id="cartSection" style="display:none">
       <div class="cart-wrap">
           <h1 class="cart-title">購物車</h1>
           <div class="cart-goods-collection">
@@ -233,53 +235,9 @@
               </div>
               <div class="cart-goods-option">
                 <label for="quantity">數量:</label>
-                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
+                <input type="number" class="cart-goods-content" id="cartGoodsQuan" style="border:1px solid #000; text-align:center" min="1" value="1"/>
               </div>
-              <div class="cart-goods-delete">取消購買</div>
-            </div>
-            <div class="cart-goods">
-              <div class="cart-goods-sample">I'm better under pressure</div>
-              <div class="cart-goods-option">
-                <label for="words">內容:</label>
-                <p class="cart-goods-content">
-                  I'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressure
-                </p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="font">字體:</label>
-                <p class="cart-goods-content">stalemate</p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="color">顏色:</label>
-                <p class="cart-goods-content">#ff55ee</p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="quantity">數量:</label>
-                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
-              </div>
-              <div class="cart-goods-delete">取消購買</div>
-            </div>
-            <div class="cart-goods">
-              <div class="cart-goods-sample">I'm better under pressure</div>
-              <div class="cart-goods-option">
-                <label for="words">內容:</label>
-                <p class="cart-goods-content">
-                  I'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressureI'm better under pressure
-                </p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="font">字體:</label>
-                <p class="cart-goods-content">stalemate</p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="color">顏色:</label>
-                <p class="cart-goods-content">#ff55ee</p>
-              </div>
-              <div class="cart-goods-option">
-                <label for="quantity">數量:</label>
-                <input type="number" class="cart-goods-content" style="border:1px solid #000; text-align:center" min="1" value="1"/>
-              </div>
-              <div class="cart-goods-delete">取消購買</div>
+              <div class="cart-goods-delete" id="cartGoddsDele">取消購買</div>
             </div>
           </div>
         </div>
@@ -302,7 +260,7 @@
     </section>
     <!-- /CART -->
     <!-- dynamical page -->
-    <section class="font-list" style="display:none">
+    <section class="font-list" id="fontlistSection" style="display:none">
       <!-- font item -->
       <div class="font-list-wrap">
         <div class="font-list-item" id="font0" style="font-family:stalemate">Choose me please!</div>
@@ -323,6 +281,11 @@
       }
     </script>
     <script src="app/scripts/library/jscolor.min.js"></script>
-    <!-- <script src="app/scripts/frontend/main.js"></script> -->
+    <script src="app/scripts/frontend/newMain.js"></script>
+    <script src="app/scripts/frontend/work.js"></script>
+    <script src="app/scripts/frontend/cart.js"></script>
+    <script src="app/scripts/frontend/font.js"></script>
+    <script src="app/scripts/frontend/nav.js"></script>
+    <!-- <script src="app/scripts/frontend/newMain.js"></script> -->
   </body>
 </html>

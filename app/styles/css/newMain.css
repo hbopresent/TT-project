@@ -63,20 +63,30 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
 }
 .navbar-wrap-btn {
-  width: 25px;
+  width: 35px;
   height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
+  position: relative;
 }
 .navbar-wrap-btnBar {
   width: 100%;
   height: 1px;
   background-color: #FFF;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  /*margin-top: 3px;
+  margin-bottom: 3px;*/
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.navbar-wrap-btnBar:first-child {
+  top: 10px;
+}
+.navbar-wrap-btnBar:last-child {
+  bottom: 10px;
 }
 .navbar-wrap-logo {
   font-family: SF-display-regular;
@@ -87,14 +97,10 @@ input[type=number]::-webkit-outer-spin-button {
   width: 30px;
   height: 30px;
   background-color: #FFF;
+  z-index: 20;
 }
-/*.sub-navbar {
-  width: 100%;
-}
-.sub-navbar-wrap {
-  width: 100%;
-}
-.sub-navbar-wrap-location {}*/
+
+
 
 
 
@@ -143,6 +149,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /************************  NAVWRAP  ***********************/
+.navPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF;
+  z-index: 10;
+  overflow: hidden;
+  /*position: absolute;*/
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
 .nav-wrap {
   width: 100%;
   height: 100%;
@@ -150,9 +167,6 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0%;
-  left: 0%;
 }
 .nav-wrap-list {
   width: 80%;
