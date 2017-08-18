@@ -96,8 +96,9 @@ input[type=number]::-webkit-outer-spin-button {
 .navbar-wrap-cart {
   width: 30px;
   height: 30px;
-  background-color: #FFF;
+  background-color: transparent;
   z-index: 20;
+
 }
 
 
@@ -136,11 +137,17 @@ input[type=number]::-webkit-outer-spin-button {
 .article {
   margin-bottom: 100px;
 }
+.customizationMsg {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .customizationMsg *{
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
 }
 .customizationMsg-title {
+  text-align: left;
   margin: 0;
   font-size: 2rem;
 }
@@ -197,6 +204,15 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   background-color: #FFF;
 }
+.home-lookbook-block {
+  width: 100%;
+}
+.home-lookbook-block h2,
+.home-lookbook-block p {
+  margin: 0;
+  text-align: center;
+}
+
 .home-lookbook-carousel {
   width: 100%;
 }

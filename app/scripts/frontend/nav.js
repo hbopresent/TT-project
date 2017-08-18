@@ -26,10 +26,10 @@ Nav.prototype = {
       main.handlePages("playSection");
       nav.handlenavPage();
     });
-    nav.gotoLookbook.addEventListener("click", function() {
-      main.handlePages("lookbookSection");
-      nav.handlenavPage();
-    });
+    // nav.gotoLookbook.addEventListener("click", function() {
+    //   main.handlePages("lookbookSection");
+    //   nav.handlenavPage();
+    // });
   },
   getnavState: function() {
     return nav.navState;

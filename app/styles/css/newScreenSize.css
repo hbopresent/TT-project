@@ -67,6 +67,22 @@
   .play-workarea-options {
     width: 80%;
   }
+  .customizationMsg1 {
+    grid-area: steps;
+  }
+  .customizationMsg2 {
+    grid-area: rules;
+  }
+  .customizationMsg3 {
+    grid-area: payment;
+  }
+  .customizationInfo {
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 5%;
+    grid-template-areas:
+      "steps rules"
+      "payment payment";
+  }
   /* /play */
 
   /* cart */

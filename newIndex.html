@@ -34,7 +34,7 @@
         <ul class="nav-wrap-list">
           <li class="nav-wrap-item" id="gotoHome">HOME</li>
           <li class="nav-wrap-item" id="gotoPlay">PLAY</li>
-          <li class="nav-wrap-item" id="gotoLookbook">LOOKBOOK</li>
+          <!-- <li class="nav-wrap-item" id="gotoLookbook">LOOKBOOK</li> -->
           <!-- <li class="nav-wrap-item" id="gotoAbout">ABOUT</li> -->
         </ul>
       </div>
@@ -54,7 +54,7 @@
             <h3 class="home-slogan-subtitle">just be yourself</h3>
           </div>
           <div class="home-guideBtn">
-            <div class="home-guideBtn-item" id="guideToAbout">What's FRANKLIN</div>
+            <!-- <div class="home-guideBtn-item" id="guideToAbout">What's FRANKLIN</div> -->
             <div class="home-guideBtn-item" id="guideToPlay">Get started</div>
           </div>
         </div>
@@ -62,8 +62,9 @@
       <!-- home work process wrap -->
       <div class="home-process-wrap">
         <div class="wrap">
-          <h1 class="home-process-title">創作就是這麼簡單</h1>
-          <div class="home-process-video">Watch Video</div>
+          <!-- <h1 class="home-process-title">創作就是這麼簡單</h1> -->
+          <!-- <div class="home-process-video">Watch Video</div> -->
+
           <div class="home-process-flowchart">
             <div class="flowchart-item">
               <span class="flowchart-item-no">1</span><p>設計自己風格的紋身貼</p>
@@ -81,11 +82,23 @@
       <!-- home lookbook carousel -->
       <div class="home-lookbook-carousel-wrap">
         <div class="wrap">
-          <div class="home-lookbook-carousel" id="lookbookCarousel">
+          <div class="home-lookbook-block" style="margin-bottom:100px;">
+            <h2 style="margin-bottom:10px;">用途</h2>
+            <p>展現自我/記錄生活/party/紀念品等</p>
+          </div>
+          <div class="home-lookbook-block">
+            <h2 style="margin-bottom:10px;">貼哪</h2>
+            <p>
+              可貼在任何平滑表面上<br>
+              馬克杯/手機殼/汽機車/筆電等
+            </p>
+          </div>
+
+          <!-- <div class="home-lookbook-carousel" id="lookbookCarousel">
             <ul class="home-lookbook-carousel-list">
               <li class="home-lookbook-carousel-item"></li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -140,32 +153,72 @@
             <input type="text" class="wordsLength" id="tattooWordsLen" readonly autocomplete="off" value="25" contenteditable="false"/>
           </div>
           <div class="play-workarea-options">
-            <div class="play-workarea-options-font">
+            <div class="play-workarea-options-item">
+              <div class="workarea-content" id="userContent"></div>
+            </div>
+            <div class="play-workarea-options-item">
               <label for="font">字體:</label>
-              <input type="button" class="font" id="userFont" value="stalemate"/>
+              <input type="button" class="workarea-font" id="userFont" value="點我選字體"/>
             </div>
-            <div class="play-workarea-options-color">
+            <div class="play-workarea-options-item">
               <label for="color">顏色:</label>
-              <input type="button" class="creationPanel-toolbar-item creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
-                     id="userColor" value="000000" readonly autocomplete="off"></input>
+              <input type="button" class="workarea-color jscolor {onFineChange:'setTextColor(this)'}"
+                     id="userColor" value="#000000" readonly autocomplete="off"></input>
             </div>
-            <div class="play-workarea-options-quantity">
-              <label for="quantity">數量:</label>
-              <input type="number" class="quantity" id="goodsQuantity" min="1" value="1"/>
+            <div class="play-workarea-options-item">
+              <div class="workarea-quantity">
+                <span class="workarea-quantity-substract" id="decreaseGoods"></span>
+                <span class="workarea-quantity-amount" contenteditable="true" id="userQuantity">1</span>
+                <span class="workarea-quantity-add" id="addGoods"></span></span>
+              </div>
             </div>
-            <div class="addToCart" id="addToCartBtn">Add to Cart</div>
+            <div class="play-workarea-options-item">
+              <div class="workarea-resetBtn" id="resetBtn">清除內容</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="play-message">
         <div class="wrap">
-          <article class="article customizationMsg" style="margin:0">
-            <h2 class="customizationMsg-title">購買須知</h2>
-            <p>尺寸依字體及內容長度而定</p>
-            <p>單品NT$200</p>
-            <p>台灣本島免運費 外島運費100</p>
-            <p>買2送1 買滿8件全球免運費</p>
-          </article>
+          <div class="customizationInfo">
+            <article class="article customizationMsg customizationMsg1">
+              <h2 class="customizationMsg-title">操作步驟</h2>
+              <ol class="customizationMsg-steps">
+                <li>方框輸入內容(限英文)並選擇字體/顏色/數量(含贈送)</li>
+                <li>螢幕拍照截圖</li>
+                <li>
+                    傳照片給我<br>
+                    LINE id: hbopresent<br>
+                    email: franklinhungcom@gmail.com
+                </li>
+              </ol>
+            </article>
+            <article class="article customizationMsg customizationMsg2">
+              <h2 class="customizationMsg-title">購買須知</h2>
+              <p>尺寸依字體及內容長度而定</p>
+              <p>單一價NT$200 買2送1</p>
+              <p>台灣本島免運費 外島運費100</p>
+              <p>買滿8件全球免運費</p>
+            </article>
+            <article class="article customizationMsg customizationMsg3">
+              <h2 class="customizationMsg-title">付款方式</h2>
+              <p class="customizationMsg-payment">
+                <label>銀行帳戶:</label>
+                <input type="text" value="玉山銀行"/>
+              </p>
+              <p class="customizationMsg-payment">
+                <label>帳戶名稱:</label>
+                <input type="text" value="洪誠鴻"/>
+              </p>
+              <p class="customizationMsg-payment">
+                <label>銀行帳號:</label>
+                <input type="text" value="0624-979-101879"/>
+              </p>
+              <p class="customizationMsg-payment">
+                <p><strong>匯款後請告知帳號後5碼/姓名/電話/地址</strong></p>
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -262,16 +315,20 @@
     <!-- dynamical page -->
     <section class="font-list" id="fontlistSection" style="display:none">
       <!-- font item -->
-      <div class="font-list-wrap">
-        <div class="font-list-item" id="font0" style="font-family:stalemate">Choose me please!</div>
-        <div class="font-list-item" id="font1" style="font-family:sacramento">Choose me please!</div>
-        <div class="font-list-item" id="font2" style="font-family:afterdark">Choose me please!</div>
-        <div class="font-list-item" id="font3" style="font-family:notera">Choose me please!</div>
-        <div class="font-list-item" id="font4" style="font-family:leaguescript">Choose me please!</div>
-        <div class="font-list-item leaveFontList" id="leaveFontList">
+      <div class="font-list-wrap" id="fontlist">
+        <div class="font-list-item" id="font0" style="font-family:stalemate">Choose me please</div>
+        <div class="font-list-item" id="font1" style="font-family:sacramento">Choose me please</div>
+        <div class="font-list-item" id="font2" style="font-family:afterdark">Choose me please</div>
+        <div class="font-list-item" id="font3" style="font-family:notera">Choose me please</div>
+        <div class="font-list-item" id="font4" style="font-family:leaguescript">Choose me please</div>
+        <!-- <div class="font-list-item leaveFontList" id="leaveFontList">
           <span class="leaveBar" style="transform:rotateZ(45deg)"></span>
           <span class="leaveBar" style="transform:rotateZ(-45deg)"></span>
-        </div>
+        </div> -->
+      </div>
+      <div class="closefontlistBtn" id="closefontlistBtn">
+        <span class="leaveBar" style="transform:rotateZ(45deg)"></span>
+        <span class="leaveBar" style="transform:rotateZ(-45deg)"></span>
       </div>
     </section>
     <script>
@@ -282,9 +339,9 @@
     </script>
     <script src="app/scripts/library/jscolor.min.js"></script>
     <script src="app/scripts/frontend/newMain.js"></script>
-    <script src="app/scripts/frontend/work.js"></script>
-    <script src="app/scripts/frontend/cart.js"></script>
     <script src="app/scripts/frontend/font.js"></script>
+    <script src="app/scripts/frontend/work.js"></script>
+    <!-- <script src="app/scripts/frontend/cart.js"></script> -->
     <script src="app/scripts/frontend/nav.js"></script>
     <!-- <script src="app/scripts/frontend/newMain.js"></script> -->
   </body>

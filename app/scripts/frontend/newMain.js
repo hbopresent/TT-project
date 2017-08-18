@@ -4,7 +4,6 @@ function Main() {
   this.playSection = document.getElementById("playSection");
   this.aboutSection = document.getElementById("aboutSection");
   this.lookbookSection = document.getElementById("lookbookSection");
-  this.fontlistSection = document.getElementById("fontlistSection");
   // lookbook carousel
   this.lookbookCarousel = document.getElementById("lookbookCarousel");
   // guide button
@@ -57,12 +56,10 @@ Main.prototype = {
     }
   },
   handlePages: function(gotoThePage) {
-    console.log("shit");
     var nowLocation = main.getNowLocation();
 
     if(nowLocation == gotoThePage) {}
     else {
-      console.log(gotoThePage);
       main.directPage(gotoThePage);
       main.closePage(nowLocation);
       main.setNowLocation(gotoThePage);
