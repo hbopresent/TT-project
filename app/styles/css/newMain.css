@@ -132,6 +132,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
+  position: relative;
   width: 100%;
 }
 .article {
@@ -142,7 +143,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: auto;
   margin-right: auto;
 }
-.customizationMsg *{
+.customizationMsg * {
   text-align: left;
   font-size: 1rem;
 }
@@ -231,11 +232,13 @@ input[type=number]::-webkit-outer-spin-button {
 /* home solgan wrap */
 .home-solgan-wrap {
   width: 100%;
-  background-color: #fff;
+  background-image: url("../../images/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
 }
 .home-slogan {
   width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -243,7 +246,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .home-slogan-title {
   font-family: SF-display-regular;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 .home-slogan-subtitle {
