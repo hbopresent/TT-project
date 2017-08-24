@@ -98,6 +98,13 @@
     margin-bottom: 50px;
   }
   /* nav wrap */
+
+  /* home value */
+  .home-vlue-wrap {
+    height: 700px;
+    background-attachment: fixed;
+  }
+  /* /home value */
 }
 /*@media only screen and (min-width: 991px) and (max-width: 1199px) {}*/
 @media only screen and (min-width: 1200px) {
